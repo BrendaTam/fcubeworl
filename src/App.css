@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  align-self: flex-end;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theslow {
+    animation: App-logo-spin infinite 5s linear;
+  }
+
+  .thefast {
+    animation: App-logo-spin infinite 1s linear;
+    align-self: flex-start;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #fb9e61;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
