@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
 
-const alterWords = ["an fartist","a pro gramer", "a phreddy"];
+const alterWords = ["tasty","edible","a recipe", "smell good"];
+const fontList = ['serif','sans-serif','cursive'];
 var count = 0;
 
 class Fcubeworl extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {fcube: "a phreddy"};
+    this.state = {
+      //state properties
+      fcube: alterWords[0],
+      font: fontList[0]
+    };
   }
 
   componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),
-      1000
+      1500
     );
   }
 
@@ -23,15 +28,16 @@ class Fcubeworl extends React.Component {
 
   tick() {
     this.setState({
-        fcube: alterWords[(count++) % alterWords.length]
+        fcube: alterWords[(count++) % alterWords.length],
+        font: fontList[(count++) % fontList.length]
     });
   }
 
   render() {
     return (
       <div>
-        <h1>F Cubeworl</h1>
-        <h2>I am ... {this.state.fcube}</h2>
+        <h1>PIZZA</h1>
+        <h2 style={{fontFamily: this.state.font}}>I am ... {this.state.fcube}</h2>
       </div>
     );
   }
